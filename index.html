@@ -17,13 +17,13 @@
   </head>
   <body>
     <header>
-      <div id="nav" class="relative h-[20vh]">
-        <nav class="flex justify-between items-center py-10 px-15">
-          <div class="flex gap-2 items-center">
-            <img src="./src/images/logo.jpg" alt="logo" class="h-[60px]" />
-            <h1 class="text-4xl font-bold">Silver Tools Enterprises</h1>
+      <div id="nav" class="min-h-[15vh] md:min-h-[20vh]">
+        <nav class="relative flex justify-between items-center pt-5 md:py-10 px-8 md:px-15 overflow-hidden ">
+          <div class="flex gap-2 items-center nav-links">
+            <img src="./src/images/logo.jpg" alt="logo" class="h-[45px] md:h-[60px]" />
+            <h1 class="text-xl md:text-4xl font-bold md:font-bold whitespace-nowrap">Silver Tools Enterprises</h1>
           </div>
-          <div class="nav-links flex justify-center items-center gap-5">
+          <div class="nav-links hidden md:flex md:justify-center md:items-center md:gap-5">
             <h4 class="text-base font-medium whitespace-nowrap">Home</h4>
             <h4 class="text-base font-medium whitespace-nowrap">About us</h4>
             <h4 class="text-base font-medium whitespace-nowrap">Services</h4>
@@ -35,38 +35,59 @@
               request a Callback
             </button>
           </div>
+            <i class="ri-menu-3-line menu-icon block md:hidden menu-btn"></i>
+          
+          </div>
+          </div>
         </nav>
       </div>
     </header>
+<div>
+  <div class="absolute z-50 top-0 right-[-80%]  flex flex-col md:hidden justify-between items-start gap-5 h-screen w-[80%] bg-white px-10 py-15 menu-nav ">
+            <div class="flex flex-col gap-5 ">
+            <h4 class="text-xl text-black font-medium whitespace-nowrap">Home</h4>
+            <h4 class="text-xl text-black font-medium whitespace-nowrap">About us</h4>
+            <h4 class="text-xl text-black font-medium whitespace-nowrap">Services</h4>
+            <h4 class="text-xl text-black font-medium whitespace-nowrap">Contact us</h4>
+            <h4 class="text-xl text-black font-medium whitespace-nowrap">Blog</h4>
 
+            <i class="ri-close-line absolute top-[5%] right-[5%] menu-cross "></i>
+            
+            </div>
+          <button
+              class="border-2 border-black rounded-2xl py-1 px-2 text-lg font-light whitespace-nowrap cursor-pointer transform active:scale-95 "
+            >
+              request a Callback
+            </button>
+</div>
     <main>
       <section
         id="hero"
-        class="h-[80vh] flex flex-col justify-between items-start py-5 px-15"
+        class="h-full md:h-[80vh] flex flex-col justify-between items-start md:py-5 px-15"
       >
-        <div class="flex justify-between items-start">
+        <div class="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center md:items-start">
           <div
             id="hero-left"
-            class="flex flex-col items-center justify-center w-5/12 gap-7"
+            class="flex flex-col items-center justify-center w-full md:w-5/12 gap-5 md:gap-7"
           >
-            <h3 class="text-6xl font-semibold">
+            <h3 class="text-3xl md:text-6xl font-semibold ">
               Securing Your Business with Technology
             </h3>
-            <h4 class="text-xl text-stone-500">
+            <h4 class="text-base md:text-xl text-justify text-stone-500">
               From robust IT infrastructure to 24/7 CCTV surveillance, Silver
               Tools Enterprises keeps your operations safe and efficient.
             </h4>
             <div
               id="hero-left-button"
-              class="flex items-center justify-evenly gap-10 mt-8"
+              class="flex items-center justify-evenly gap-10 md:mt-8"
             >
               <button
-                class="border-2 border-black bg-white text-black active:scale-95 rounded-2xl py-2 px-4 text-xl font-semibold whitespace-nowrap cursor-pointer"
+                class="border-2 border-black bg-white text-black active:scale-95 rounded-2xl py-2 px-4 text-base md:text-xl mb-5 md:mb-0 font-semibold whitespace-nowrap cursor-pointer"
               >
                 Explore Solutions
               </button>
               <button
-                class="border-2 border-black bg-black text-white active:scale-95 rounded-2xl py-2 px-4 text-xl font-semibold whitespace-nowrap cursor-pointer"
+                class="border-2 border-black bg-black text-white active:scale-95 rounded-2xl py-2 px-4 text-base md:text-xl mb-5 md:mb-0 font-semibold whitespace-nowrap cursor-pointer"
               >
                 talk to an Expert
               </button>
@@ -74,7 +95,7 @@
           </div>
           <div
             id="hero-right"
-            class="h-[80%] w-5/12 flex justify-center items-center"
+            class="md:h-[80%] w-full md:w-5/12 flex justify-center items-center mb-5 md:mb-0"
           >
             <img
               src="https://media.istockphoto.com/id/2256435613/photo/creative-collage-smiling-woman-using-laptop-with-chat-icons-symbolizing-customer-engagement.jpg?s=1024x1024&w=is&k=20&c=RWDwEgxEQFKPLTGLRqHvuV4NJRNHLgVhZAFNETwAEQQ="
@@ -85,7 +106,7 @@
         <!-- Company Logos -->
         <div
           id="company-logos"
-          class="flex py-5 flex-wrap w-full justify-between items-center gap-10 md:gap-24"
+          class="flex py-5 flex-wrap w-full justify-between items-center gap-5 md:gap-24"
         >
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazon.svg"
@@ -125,21 +146,21 @@
         </div>
       </section>
 
+      <!-- Services Content -->
       <section
         id="services"
-        class="min-h-screen w-full px-6 md:px-16 flex flex-col justify-evenly overflow-hidden"
+        class="h-full md:min-h-screen w-full px-6 md:px-16 flex flex-col justify-evenly overflow-hidden mb-5 md:mb-0"
       >
-        <!-- Services Content -->
         <div class="flex flex-col items-center gap-6 mt-5 h-full">
-          <div class="flex justify-center items-center gap-6 md:gap-20 mt-10">
+          <div class="flex flex-col md:flex-row md:justify-row justify-center items-center gap-6 md:gap-20 mt-10">
             <h3
-              class="text-2xl font-semibold whitespace-nowrap bg-green-400 px-8 py-4 rounded active:scale-95 hover:bg-green-500 cursor-pointer"
+              class="text-2xl md:text-4xl font-semibold whitespace-nowrap bg-green-400 px-4 py-2 rounded active:scale-95 hover:bg-green-500 cursor-pointer"
             >
               Services
             </h3>
 
             <p
-              class="text-sm md:text-base font-medium max-w-2xl leading-relaxed text-gray-600 hover:text-gray-950"
+              class="text-sm md:text-base text-justify font-medium max-w-2xl leading-relaxed text-gray-600 hover:text-gray-950"
             >
               Silver Tools Enterprises is a leading provider of professional IT
               services and security solutions. We specialize in cutting-edge
@@ -156,23 +177,23 @@
 
       <section
         id="last"
-        class="py-10 px-15 flex flex-col items-center justify-center gap-20"
+        class="md:py-10 px-5 md:px-15 flex flex-col items-center justify-center gap-10 md:gap-20"
       >
         <div
-          class="h-[50vh] w-full bg-gray-200 py-10 px-15 rounded-2xl flex items-center justify-between shadow-lg"
+          class="h-full md:h-[50vh] w-full bg-gray-200 py-10 px-15 rounded-2xl flex items-center justify-between shadow-lg gap-20"
         >
           <div
-            class="last-left h-full w-[40%] flex flex-col items-start justify-center gap-10"
+            class="last-left h-full w-[40%] flex flex-col items-start justify-center gap-3 md:gap-10"
           >
-            <h4 class="text-4xl text-black font-medium">
+            <h4 class="text-lg md:text-4xl text-black font-medium whitespace-nowrap md:whtitespace-normal">
               Let's make things happen
             </h4>
-            <p class="text-base text-gray-600 font-sm leading-tight">
+            <p class="text-xs md:text-base text-gray-600 text-justify font-medium leading-tight">
               Contact us today to learn more about how our CCTV surveillance
               services can help you safe guard your business.
             </p>
             <button
-              class="bg-black text-white px-6 py-3 rounded-xl active:scale-95 cursor-pointer"
+              class="bg-black text-xs md:text-xl text-white px-2 md:px-6 py-1 md:py-3 rounded-xl whitespace-nowrap active:scale-95 cursor-pointer"
             >
               Get your free proposal
             </button>
@@ -181,18 +202,18 @@
             <img
               src="https://images.unsplash.com/photo-1545987796-200677ee1011?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Loading..."
-              class="h-[40vh] grayscale rounded-xl border-gray-650 hover:grayscale-0"
+              class="h-[20vh] md:h-[40vh] grayscale rounded-xl border-gray-650 hover:grayscale-0"
             />
           </div>
         </div>
 
-        <div class="last-bottom flex justify-center items-center gap-5">
+        <div class="last-bottom flex flex-col md:flex-row justify-center items-center gap-5 mb-5 md:mb-0">
           <h4
-            class="bg-green-400 text-black text-4xl font-bold px-4 py-2 rounded active:scale-95 hover:bg-green-500 cursor-pointer"
+            class="bg-green-400 text-black text-2xl md:text-4xl font-bold px-4 py-2 rounded active:scale-95 hover:bg-green-500 cursor-pointer whitespace-nowrap"
           >
             Case study
           </h4>
-          <p class="text-base text-gray-600">
+          <p class="text-sm md:text-base text-gray-600">
             Explore Real-Life Examples of our Proven Digital Marketing Success
             through Our Case Studies.
           </p>
@@ -203,7 +224,7 @@
     <footer class="relative bottom-0 overflow-hidden">
       <div
         id="footer"
-        class="h-[45vh] flex items-center justify-evenly gap-8 bg-black px-15 py-10"
+        class="h-full md:h-[45vh] flex flex-col md:flex-row items-center justify-center md:justify-evenly gap-8 bg-black px-15 py-10 md:py-5"
       ></div>
     </footer>
 

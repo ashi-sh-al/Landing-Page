@@ -84,10 +84,10 @@ services.forEach((item, idx) => {
     const card = document.createElement("div");
      if (idx === 1){
       card.className =
-      "right line1 relative h-[35vh] w-[full] md:w-[50%] lg:w-[45%] p-4 bg-white text-black border-2 border-black border-b-5 rounded-xl flex justify-between items-start gap-4 overflow-hidden shadow-lg hover:scale-105 ";
+      "right line1 relative h-[35vh] w-[full] md:w-[50%] lg:w-[45%] p-4 bg-black text-black border-2 border-black border-b-5 rounded-xl flex justify-between items-start gap-4 overflow-hidden shadow-lg hover:scale-105 ";
     } else {
       card.className =
-      "left line2 relative h-[35vh] w-[full] md:w-[50%] lg:w-[45%] p-4 bg-white text-black border-2 border-black border-b-5 rounded-xl flex justify-between items-start gap-4 overflow-hidden shadow-lg hover:scale-105 ";
+      "left line2 relative h-[35vh] w-[full] md:w-[50%] lg:w-[45%] p-4 bg-black text-black border-2 border-black border-b-5 rounded-xl flex justify-between items-start gap-4 overflow-hidden shadow-lg hover:scale-105 ";
     }
 
     // Title
@@ -153,7 +153,7 @@ footer.forEach((item) => {
   const container = document.createElement("div");
   if (item.id !== 3) {
     container.className =
-    "footerContent flex flex-col h-[80%] items-start gap-4 bg-black border-r-2 border-gray-600 pr-5";
+    "footerContent flex flex-col h-[80%] items-start gap-4 bg-black border-b-2 md:border-b-0 md:border-r-2 border-gray-600 pr-5";
   } else {
     container.className =
     "footerContent flex flex-col h-[80%] items-start gap-4 bg-black";
@@ -162,7 +162,7 @@ footer.forEach((item) => {
   // Quote text
   const text = document.createElement("p");
   text.textContent = item.text;
-  text.className = "text-lg text-white md:text-base leading-tight";
+  text.className = "text-lg text-justify text-white md:text-base leading-tight";
 
   // Learn more link
   const learnMoreBtn = document.createElement("a");

@@ -1,30 +1,74 @@
 function pageOneAnimation() {
   let tl = gsap.timeline();
 
-  tl.from("nav img, nav h1, nav h4, nav button", {
-    y: -30,
-    opacity: 0,
-    duration: 0.7,
-    delay: 0.5,
-    stagger: 0.15,
+  tl.from(
+    ".nav-links img, .nav-links h1, .nav-links h4, .nav-links button, .menu-icon",
+    {
+      y: -30,
+      opacity: 0,
+      duration: 0.7,
+      stagger: 0.15,
+    },
+  );
+
+  let menu = document.querySelector(".menu-btn");
+  let cross = document.querySelector(".menu-cross");
+
+  let tlMenu = gsap.timeline();
+
+  tlMenu.to(".menu-nav", {
+    right: 0,
+    top:0,
+    duration: 0.3,
   });
 
-  tl.from("#hero-left h3", {
-    x: -200,
+  tlMenu.from(".menu-nav h4", {
+    x: 200,
+    opacity:0,
+    duration: 0.2,
+    stagger: 0.1,
+  });
+  tlMenu.from(".menu-nav i", {
     opacity: 0,
-    duration: 0.5,
   });
 
-  tl.from("#hero-left h4", {
-    x: -100,
-    opacity: 0,
-    duration: 0.5,
+  tlMenu.pause();
+  menu.addEventListener("click", () => {
+    tlMenu.play();
+  });
+  cross.addEventListener("click", () => {
+    tlMenu.reverse();
   });
 
-  tl.from("#hero-left button", {
-    opacity: 0,
-    duration: 0.4,
-  });
+  
+  tl.from(
+    "#hero-left h3",
+    {
+      x: -200,
+      opacity: 0,
+      duration: 0.5,
+    },
+    "-=0.8",
+  );
+
+  tl.from(
+    "#hero-left h4",
+    {
+      x: -100,
+      opacity: 0,
+      duration: 0.5,
+    },
+    "-=0.8",
+  );
+
+  tl.from(
+    "#hero-left button",
+    {
+      opacity: 0,
+      duration: 0.4,
+    },
+    "-=0.8",
+  );
 
   tl.from(
     "#hero-right img",
@@ -32,7 +76,7 @@ function pageOneAnimation() {
       opacity: 0,
       duration: 1,
     },
-    "-=0.5",
+    "-=1.3",
   );
 
   tl.from(
@@ -160,28 +204,32 @@ function lastPageAnimation() {
 
 lastPageAnimation();
 
-function footerAnimation () {
-    let tl3 = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#footer",
-    scroller: "body",
-    start: "top 90%",
-    end: "top 70%",
-    scrub: 2,
-  },
-});
+function footerAnimation() {
+  let tl3 = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#footer",
+      scroller: "body",
+      start: "top 90%",
+      end: "top 70%",
+      scrub: 2,
+    },
+  });
 
-tl3.from(".footerContent p", {
-  y:30,  
-  opacity: 0,
-  duration: 0.5,
-});
+  tl3.from(".footerContent p", {
+    y: 30,
+    opacity: 0,
+    duration: 0.5,
+  });
 
-tl3.from(".footerContent a", {
-  scale:0,  
-  opacity: 0,
-  duration: 0.2,
-}, "-=0.2");
+  tl3.from(
+    ".footerContent a",
+    {
+      scale: 0,
+      opacity: 0,
+      duration: 0.2,
+    },
+    "-=0.2",
+  );
 }
 
 footerAnimation();
