@@ -97,7 +97,7 @@ function pageTwoAnimation() {
     scrollTrigger: {
       trigger: "#services",
       scroller: "body",
-      start: "top 70%",
+      start: "top 80%",
       end: "bottom 70%",
       scrub: 2,
     },
@@ -218,6 +218,7 @@ function footerAnimation() {
     y: 30,
     opacity: 0,
     duration: 0.5,
+    stagger:0.1,
   });
 
   tl3.from(
@@ -226,6 +227,7 @@ function footerAnimation() {
       scale: 0,
       opacity: 0,
       duration: 0.2,
+      stagger:0.15,
     },
     "-=0.2",
   );

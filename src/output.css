@@ -324,6 +324,12 @@
   .w-\[80\%\] {
     width: 80%;
   }
+  .w-\[85\%\] {
+    width: 85%;
+  }
+  .w-\[85\] {
+    width: 85;
+  }
   .w-\[full\] {
     width: full;
   }
@@ -350,6 +356,9 @@
   }
   .resize {
     resize: both;
+  }
+  .scroll-px-2\.5 {
+    scroll-padding-inline: calc(var(--spacing) * 2.5);
   }
   .flex-col {
     flex-direction: column;
@@ -823,6 +832,11 @@
     @media (width >= 48rem) {
       border-bottom-style: var(--tw-border-style);
       border-bottom-width: 0px;
+    }
+  }
+  .md\:px-0 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 0);
     }
   }
   .md\:px-6 {
