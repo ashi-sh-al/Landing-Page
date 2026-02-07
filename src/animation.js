@@ -18,7 +18,6 @@ function pageOneAnimation() {
 
   tlMenu.to(".menu-nav", {
     right: 0,
-    top:0,
     duration: 0.3,
   });
 
